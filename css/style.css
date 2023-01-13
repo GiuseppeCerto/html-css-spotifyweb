@@ -38,7 +38,7 @@ main{
     flex-grow: 1;
     background-color: rgba(20,25,34,255);
     display: flex;
-    overflow: hidden;
+    overflow: auto;
 }
 
 
@@ -306,6 +306,7 @@ aside{
 .sidebar-container{
     width: 230px;
     background-color: rgba(0,0,0,255);
+    overflow: hidden;
     display: flex;
     flex-direction: column;
     padding-left: 20px;
@@ -334,10 +335,21 @@ aside{
 .home-icon-sec {
     display: flex;
     flex-direction: column;
-    gap: 12px;
-    font-size: 14px;
+    gap: 9px;
+    font-size: 13px;
     font-weight: 600;
     margin-bottom: 30px;
+    position: relative;
+}
+
+.home-icon:before{
+    content: "";
+    width: 3px;
+    height: 34px;
+    background-color: rgba(173,255,47,255);
+    position: absolute;
+    top: -5px;
+    left: -17px;
 }
 
 .icon-flex{
@@ -348,13 +360,16 @@ aside{
     flex-basis: 100%;
 }
 
-.icon-flex > img{
+.icon-flex img{
     width: 23px;
+    filter: invert(0.4);
 }
+
 
 .playlist-menu{
     display: flex;
     flex-direction: column;
+    margin-bottom: auto;
 }
 
 .playlist-menu > h2{
@@ -368,16 +383,72 @@ aside{
     display: flex;
     align-items: center;
     gap: 11px;
+    margin-bottom: 20px;
 }
 
-.playlist-button > i{
-    padding: 9px;
+.plus-button{
+    font-size: 25px;
+    padding: 7px 9px; 
     background-color: rgba(163,163,163,255);
     color: black;
 }
 
-.playlist-button > div{
+.playlist-button > a{
+    font-size: 16px;
+}
+
+.playlist-name{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
     font-size: 14px;
 }
 
+.app-download{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 25px;
+    position: relative;
+}
 
+.app-download img{
+    width: 15px;
+    margin-bottom: -3px;
+    filter: invert(0.3);
+}
+
+.app-download a{
+    font-size: 13px;
+}
+
+.app-download::after{
+    content: "";
+    width: 190px;
+    background-color: rgba(163,163,163,255);
+    border-radius: 1px;
+    height: 1px; 
+    position: absolute;
+    top: 28px;
+}
+
+.profile-utent{
+    display: flex;
+    gap: 9px;
+    margin-bottom: 6px;
+    align-items: center;
+}
+
+.profile-utent img{
+    width: 23px;
+    background-color: rgba(163,163,163,255);
+    border-radius: 50%;
+    padding: 2px 3px;
+}
+
+.name-profile-utent{
+    color: white;
+    margin-bottom: 4px;
+    font-size: 14px;
+    font-weight: 600;
+} 
