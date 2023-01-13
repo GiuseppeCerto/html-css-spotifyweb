@@ -28,11 +28,11 @@ main{
     flex-grow: 1;
     background-color: rgba(20,25,34,255);
     display: flex;
+    overflow: hidden;
 }
 
-nav{
+aside{
     flex-shrink: 0;
-    /* height: 90px; */
     background-color: rgba(40,40,40,255);
 }
 
@@ -43,11 +43,13 @@ nav{
 
 .main-container{
     flex-grow: 1;
+    overflow-y: auto;
 }
 /****** SPOTIFY ******/
 
 
 .max-container{
+
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -94,7 +96,7 @@ nav{
     justify-content: center;
 }
 
-.track-played{
+.album-track-played{
     max-width: 42px;
     margin-right: 11px;
     flex-basis: 100%;
@@ -168,13 +170,18 @@ nav{
 }
 
 .track-bar{
-    position: relative;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
     gap: 22px;
     width: 100%;
+}
+
+.progress-bar-container{
+    position: relative;
+    width: 100%;
+    gap: 22px;
 }
 
 .progress-bar{
@@ -186,8 +193,8 @@ nav{
 
 .progress-bar-gray{
     position: absolute;
-    left: 44px;
-    width: 20%;
+    top: 0;
+    width: 30%;
     height: 5px;
     background-color: rgba(173,173,173,255);
     border-radius: 5px;
@@ -195,17 +202,18 @@ nav{
 
 .progress-bar-gray:hover{
     position: absolute;
-    left: 30%;
-    width: 20%;
+    top: 0;
+    width: 30%;
     height: 5px;
     background-color: greenyellow;
     border-radius: 5px;
 }
 
-.track-bar > i{
+.progress-bar-container > i{
     display: block;
     position: absolute;
-    left: 30%;
+    top: -5px;
+    left: 29%;
     z-index: 2;
 }
 
@@ -225,8 +233,16 @@ nav{
     width: 100%;
 }
 
-.volume-player > i{
+.volume-player{
     font-size: 12px;
+}
+
+.bar-volume-container{
+    position: relative;
+    display: flex;
+    gap: 13px;
+    align-items: center;
+
 }
 
 .progress-bar-volume{
@@ -234,4 +250,25 @@ nav{
     height: 3px;
     background-color: rgba(90,90,90,255);
     border-radius: 5px;
+}
+
+.progress-volume{
+    position: relative;
+}
+
+.circle-icon{
+    position: absolute;
+    font-size: 12px;
+    top: -4px;
+    left: 28px;
+    z-index: 2;
+}
+
+.progress-bar-volume-gray{
+    position: absolute;
+    width: 30px;
+    height: 3px;
+    background-color: rgba(173,173,173,255);
+    border-radius: 5px;
+
 }
