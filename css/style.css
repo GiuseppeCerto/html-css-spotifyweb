@@ -84,6 +84,7 @@ aside{
 .small-player{
     flex-basis: 30%;
     justify-content: flex-start;
+    min-width: 140px;
 }
 
 .small-player-end{
@@ -114,6 +115,8 @@ aside{
 }
 
 .track-name{
+    display: flex;
+    gap: 2px;
     font-size: 11px;
     color: rgba(107,107,107,255);
 }
@@ -210,14 +213,14 @@ aside{
 }
 
 .progress-bar-container > i{
-    display: block;
+    display: none;
     position: absolute;
     top: -5px;
     left: 29%;
     z-index: 2;
 }
 
-.track-bar > i:hover{
+.track-bar i:hover{
     display: table;
 }
 
@@ -231,9 +234,6 @@ aside{
     gap: 17px;
     align-items: center;
     width: 100%;
-}
-
-.volume-player{
     font-size: 12px;
 }
 
@@ -257,6 +257,7 @@ aside{
 }
 
 .circle-icon{
+    display: none;
     position: absolute;
     font-size: 12px;
     top: -4px;
@@ -270,5 +271,38 @@ aside{
     height: 3px;
     background-color: rgba(173,173,173,255);
     border-radius: 5px;
+}
+
+
+/****** QUERY PLAYER ******/
+
+@media only screen and (max-width: 639px){
+
+    .album-track-played{
+        width: 22%;
+    }
+
+    .icon-track-played{
+        flex-direction: column;
+        gap: 0;
+        row-gap: 5px;
+    }
+
+    .track-name{
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .volume-player{
+        gap: 9px;
+        justify-content: space-between;
+    }
+
+    .media-player{
+        gap: 8px;
+    }
+
+
+    
 
 }
