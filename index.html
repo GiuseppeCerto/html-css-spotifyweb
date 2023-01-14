@@ -34,30 +34,30 @@
                         <div class="icon-flex home-icon">
 
                             <a href="#">
-                                <img src="./img/home.svg" alt="home icon">
+                                <img id="hovericon" src="./img/home.svg" alt="home icon">
                             </a>
                             
-                            <a href="#">Home</a>
+                            <a id="hovertext" href="#">Home</a>
 
                         </div>
 
                         <div class="icon-flex search-icon">
 
                             <a href="#">
-                                <img src="./img/search.svg" alt="search icon">
+                                <img id="hovericon" src="./img/search.svg" alt="search icon">
                             </a>
                             
-                            <a href="#">Cerca</a>
+                            <a id="hovertext" href="#">Cerca</a>
 
                         </div>
 
                         <div class="icon-flex library-icon">
                             
                             <a href="#">
-                                <img src="./img/libreria.svg" alt="library icon">
+                                <img id="hovericon" src="./img/libreria.svg" alt="library icon">
                             </a>
                             
-                            <a href="#">La tua Libreria</a>
+                            <a id="hovertext" href="#">La tua Libreria</a>
                         </div>
                     </div>
                 </div>
@@ -69,10 +69,10 @@
                     <div class="playlist-button">
 
                         <a href="#">
-                            <i class="plus-button fa-solid fa-plus"></i>
+                            <i id="hoverbutton" class="plus-button fa-solid fa-plus"></i>
                         </a>
                         
-                        <a href="#">Crea Playlist</a>
+                        <a id="hovertext" href="#">Crea Playlist</a>
 
                     </div>
 
@@ -87,37 +87,64 @@
                         <a href="#">Nome Playlist</a>
 
                     </div>
-
-
                 </div>
 
                 <div class="app-download">
                 
                     <a href="#">
-                        <img src="./img/download.svg" alt="download icon">
+                        <img id="hovericon" src="./img/download.svg" alt="download icon">
                     </a>
 
-                    <a href="#">Installa app</a>
+                    <a id="hovertext" href="#">Installa app</a>
 
                 </div>
 
-               <div class="profile-utent">
+                <div class="profile-utent">
 
-                <a href="#">
-                    <img src="./img/profile.svg" alt="profile image">
-                </a>
+                    <a href="#">
+                        <img src="./img/profile.svg" alt="profile image">
+                    </a>
 
-                <a class="name-profile-utent" href="#">Jonh Doe</a>
+                    <div class="name-profile-utent">Jonh Doe</div>
 
-               </div>
+                </div>
             </div>
-
-
 
 
 
             <div class="main-container">
               
+                <div class="upgrade-bar">
+
+                    <div class="upgrade-button">
+                        effettua l'upgrade
+                    </div>
+                </div>
+
+                <div class="menu-main-container">
+
+                    <div class="menu-main">
+                        <div class="menu-item">
+                            in evidenza
+                        </div>
+                        <div class="menu-item">
+                            podcast
+                        </div>
+                        <div class="menu-item">
+                            classifiche
+                        </div>
+                        <div class="menu-item">
+                            generi e mood
+                        </div>
+                        <div class="menu-item">
+                            nuove uscite
+                        </div>
+                        <div class="menu-item">
+                            scopri
+                        </div>
+                    </div>
+
+                </div>
             </div>
 
         </main>
@@ -130,25 +157,28 @@
 
                 <img class="album-track-played" src="./img/sinister.jpeg" alt="sinister img">
 
-                <div class="name-track-played">
+                <div class="name-icon-played__container">
 
-                    <span class="artist-name">
-                        <a href="#">Sinister</a>
-                    </span>
+                    <div class="name-track-played">
 
-                    <span class="track-name">
-                       <a href="#">Brano</a>
-                       <a href="#">Nome</a>
-                    </span>
+                        <span class="artist-name">
+                            <a href="#">Sinister</a>
+                        </span>
+
+                        <span class="track-name">
+                            <a href="#">Brano</a>
+                            <a href="#">Nome</a>
+                        </span>
+
+                    </div>
+
+                    <div class="icon-track-played">
+
+                        <i class="fa-regular fa-heart icon-track1"></i>
+                        <i class="fa-regular fa-folder icon-track2"></i>
+
+                    </div>
                 </div>
-
-                <div class="icon-track-played">
-
-                    <i class="fa-regular fa-heart icon-track1"></i>
-                    <i class="fa-regular fa-folder icon-track2"></i>
-
-                </div>
-
             </div>
 
 
@@ -185,7 +215,6 @@
 
                     <span class="time-track">4:35</span>
 
-
                 </div>
 
             </div>
@@ -204,9 +233,11 @@
                         <i class="fa-solid fa-volume-high"></i>
 
                         <div class="progress-volume">
+
                             <i class="circle-icon fa-solid fa-circle"></i>
 
                             <div class="progress-bar-volume-gray"></div>
+
                             <div class="progress-bar-volume"></div>
                         </div>
                     </div>
