@@ -54,7 +54,7 @@ aside{
     background-color: rgba(40,40,40,255);
 }
 
-.media-player{
+.media-player-container{
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -318,8 +318,9 @@ aside{
 
 @media only screen and (max-width: 639px){
 
-    .media-player{
+    .media-player-container{
         gap: 20px;
+        min-width: 500px;
     }    
     
     .album-track-played{
@@ -340,6 +341,10 @@ aside{
         flex-direction: column;
         gap: 0;
     }
+
+    .progress-volume:hover #circle-button-volume{
+        display: none;
+    }
 }
 
 
@@ -348,7 +353,7 @@ aside{
   
 
 .sidebar-container{
-    width: 230px;
+    min-width: 230px;
     background-color: rgba(0,0,0,255);
     overflow: hidden;
     display: flex;
@@ -363,11 +368,13 @@ aside{
 
 .big-logo{
    width: 130px; 
+   cursor: pointer;
 }
 
 .small-logo{
     width: 30px;
     display: none;
+    cursor: pointer;
 }
 
 .sidebar-nav{
@@ -535,7 +542,8 @@ aside{
 @media only screen and (max-width: 552px){
 
     .sidebar-container{
-        width: 50px;
+        max-width: 50px;
+        min-width: 50px;
         padding: 5px 10px 0 10px;
     }
 
@@ -623,3 +631,85 @@ aside{
     margin-right: 5px;
     cursor: pointer;
 }
+
+.menu-main-container{
+    display: flex;
+    justify-content: center;
+    margin: 22px 33px 45px 33px;
+
+}
+
+.menu-main{
+    display: flex;
+    justify-content: center;
+    gap: 23px;
+    flex-wrap: wrap;
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: 600;
+    color: rgba(163,163,163,255);
+}
+
+.menu-item{
+    position: relative;
+}
+
+.item-clicked::after{
+    content: "";
+    display: block;
+    width: 28px;
+    height: 2px;
+    background-color: rgba(173,255,47,255);
+    position: absolute;
+    left: 37%;
+    margin-top: 4px;
+}
+
+.albums-main-container{
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+}
+
+.title-played {
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+.albums-played{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.album-flex{
+    flex-basis: calc((100% / 6) - 20px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.album-flex > img{
+    max-width: 100%;
+    min-width: 120px;
+    margin-bottom: 20px;
+}
+
+.title-album{
+   font-weight: 600;
+   font-size: 16px;   
+}
+
+.title-album1{
+    font-weight: 600;
+    font-size: 16px;   
+    padding-left: 8px;
+}
+
+.subtitle-album{
+    font-size: 12px;
+    color: rgba(125,127,132,255);
+    margin-top: 10px;
+}
+
