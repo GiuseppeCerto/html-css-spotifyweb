@@ -426,11 +426,15 @@ aside{
     font-size: 16px;
 }
 
-.playlist-name{
+.playlist-name-items{
     display: flex;
     flex-direction: column;
     gap: 20px;
     font-size: 14px;
+}
+
+.playlist-name-items > *{
+    cursor: pointer;
 }
 
 .app-download{
@@ -501,7 +505,7 @@ aside{
     color: white;
 }
 
-.playlist-name > a:hover {
+.playlist-name-items > li:hover {
     color: white;
 }
 
