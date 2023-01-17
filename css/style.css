@@ -180,7 +180,7 @@ aside{
     border-radius: 5px;
 }
 
-#circle-button-time{
+.circle-button-time{
     display: none;
     position: absolute;
     top: -6px;
@@ -228,7 +228,7 @@ aside{
     cursor: pointer;
 }
 
-#circle-button-volume{
+.circle-button-volume{
     display: none;
     position: absolute;
     font-size: 12px;
@@ -259,7 +259,7 @@ aside{
     transform: scale(1.1);
 }
 
-.progress-bar-container:hover #progress-bar-gray{
+.progress-bar-container:hover .progress-bar-gray{
     position: absolute;
     top: 0;
     width: 20%;
@@ -269,12 +269,12 @@ aside{
     cursor: pointer;
 }
 
-.progress-bar-container:hover #circle-button-time{
+.progress-bar-container:hover .circle-button-time{
     display: block;
     cursor: pointer;
 }
 
-.progress-volume:hover #circle-button-volume{
+.progress-volume:hover .circle-button-volume{
     display: block;
     cursor: pointer;
 }
@@ -318,7 +318,7 @@ aside{
         gap: 0;
     }
 
-    .progress-volume:hover #circle-button-volume{
+    .progress-volume:hover .circle-button-volume{
         display: none;
     }
 }
@@ -415,7 +415,7 @@ aside{
     margin-bottom: 20px;
 }
 
-.plus-button{
+.hoverbutton{
     font-size: 25px;
     padding: 7px 9px; 
     background-color: rgba(163,163,163,255);
@@ -433,7 +433,7 @@ aside{
     font-size: 14px;
 }
 
-.playlist-name-items > *{
+.playlist-name-items > li{
     cursor: pointer;
 }
 
@@ -489,19 +489,19 @@ aside{
 
 /****** :HOVER SIDEBAR ******/
 
-.icon-flex:hover #hovericon{
+.icon-flex:hover .hovericon{
     filter: invert(0);
 }
 
-.icon-flex:hover #hovertext{
+.icon-flex:hover .hovertext{
     color: white;
 }
 
-.playlist-button:hover #hoverbutton{
+.playlist-button:hover .hoverbutton{
     background-color: white;
 }
 
-.playlist-button:hover #hovertext{
+.playlist-button:hover .hovertext{
     color: white;
 }
 
@@ -509,11 +509,11 @@ aside{
     color: white;
 }
 
-.app-download:hover #hovericon{
+.app-download:hover .hovericon{
     filter: invert(0);
 }
 
-.app-download:hover #hovertext{
+.app-download:hover .hovertext{
     color: white;
 }
 
@@ -550,7 +550,7 @@ aside{
         margin-bottom: auto;
     }
 
-    .icon-flex #hovertext{
+    .icon-flex .hovertext{
         display: none;
         margin-bottom: auto;
     }
@@ -563,7 +563,7 @@ aside{
         display: none;
     }
 
-    .app-download #hovertext{
+    .app-download .hovertext{
         display: none;
     }
 
@@ -597,7 +597,7 @@ aside{
     background-color: rgba(8,11,18,255);
 }
 
-#upgrade-button{
+.upgrade-button{
     /* color: #000;
     filter: brightness(0);
     filter: invert(1); */
@@ -684,12 +684,12 @@ aside{
     position: relative;
 }
 
-#image-album-play{
+.image-album-play{
     max-width: 100%;
     min-width: 120px;
 }
 
-#play-button-album{
+.play-button-album{
     position: absolute;
     font-size: 45px;
     top: 50%;
@@ -718,6 +718,13 @@ aside{
     margin-top: 10px;
 }
 
+.album-createdfor{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 30px;
+}
+
 .album-flex1{
     flex-basis: calc((100% / 6) - 13px);
     display: flex;
@@ -729,17 +736,10 @@ aside{
     cursor: pointer;
 }
 
-.album-createdfor{
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    margin-top: 30px;
-}
-
 .most-popular{
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 15px;
     margin-top: 30px;
     margin-bottom: 45px;
 }
@@ -752,7 +752,7 @@ aside{
 /****** HOVER MAIN ******/
 
 
-#upgrade-button:hover{
+.upgrade-button:hover{
     transform: scale(1.1);
 }
 
@@ -760,13 +760,13 @@ aside{
     color: white;
 }
 
-.album-play:hover #play-button-album{
+.album-play:hover .play-button-album{
     display: block;
     z-index: 99;
     opacity: 1;
 }
 
-.album-play:hover #image-album-play{
+.album-play:hover .image-album-play{
     opacity: 0.3;
 }
 
