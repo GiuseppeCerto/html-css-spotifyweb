@@ -375,7 +375,7 @@ aside{
     background-color: rgba(173,255,47,255);
     position: absolute;
     top: -5px;
-    left: -17px;
+    left: -19px;
 }
 
 .icon-flex{
@@ -592,23 +592,23 @@ aside{
     align-items: center;
     height: 90px;
     width: 100%;
-    /* filter:brightness(40%); */
-    /* background-color: rgba(20,25,34,255); */
-    background-color: rgba(8,11,18,255);
+    background-color: rgba(0,0,0,0.5);
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    /* background-color: rgba(8,11,18,255); */
 }
 
 .upgrade-button{
-    /* color: #000;
-    filter: brightness(0);
-    filter: invert(1); */
     text-transform: uppercase;
     font-size: 11px;
     font-weight: 600;
     padding: 15px 40px 15px 40px;
     border: 1px solid white;
     border-radius: 50px;
-    margin-right: 13px;
-    cursor: pointer;
+    color: white;    
+    cursor: pointer;  
+    margin-right: 13px; 
 }
 
 .menu-main-container{
@@ -698,10 +698,10 @@ aside{
     display: none;
 }
 
-.title-album{
-   font-weight: 700;
-   font-size: 16px; 
-   margin-top: 20px;  
+.title-album{    
+    font-weight: 700;
+    font-size: 16px; 
+    margin-top: 20px;  
 }
 
 .subtitle-album{
@@ -760,13 +760,23 @@ aside{
     color: white;
 }
 
-.album-play:hover .play-button-album{
+.album-flex:hover .play-button-album{
     display: block;
     z-index: 99;
     opacity: 1;
 }
 
-.album-play:hover .image-album-play{
+.album-flex:hover .image-album-play{
+    opacity: 0.3;
+}
+
+.album-flex1:hover .play-button-album{
+    display: block;
+    z-index: 99;
+    opacity: 1;
+}
+
+.album-flex1:hover .image-album-play{
     opacity: 0.3;
 }
 
