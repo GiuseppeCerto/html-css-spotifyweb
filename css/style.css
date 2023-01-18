@@ -172,7 +172,8 @@ aside{
     cursor: pointer;
 }
 
-#progress-bar-gray{
+.progress-bar-gray{
+    position: absolute;
     top: 0;
     width: 20%;
     height: 3px;
@@ -368,14 +369,14 @@ aside{
     position: relative;
 }
 
-.home-icon:before{
+.icon-flex::before{
     content: "";
     width: 3px;
     height: 34px;
     background-color: rgba(173,255,47,255);
     position: absolute;
-    top: -5px;
-    left: -19px;
+    left: -9%;
+    display: none;
 }
 
 .icon-flex{
@@ -426,6 +427,10 @@ aside{
     font-size: 16px;
 }
 
+.playlist-button > *{
+    cursor: pointer;
+}
+
 .playlist-name-items{
     display: flex;
     flex-direction: column;
@@ -433,7 +438,7 @@ aside{
     font-size: 14px;
 }
 
-.playlist-name-items > li{
+.playlist-name-items a{
     cursor: pointer;
 }
 
@@ -495,6 +500,10 @@ aside{
 
 .icon-flex:hover .hovertext{
     color: white;
+}
+
+.icon-flex:hover::before{
+    display: block;
 }
 
 .playlist-button:hover .hoverbutton{
@@ -615,7 +624,6 @@ aside{
     display: flex;
     justify-content: center;
     margin: 22px 33px 0px 33px;
-
 }
 
 .menu-main{
@@ -636,12 +644,14 @@ aside{
 .item-clicked::after{
     content: "";
     display: block;
+    position: absolute;
     width: 28px;
     height: 2px;
     background-color: rgba(173,255,47,255);
-    position: absolute;
-    left: 37%;
+    left: 50%;
+    transform: translate(-50%);
     margin-top: 4px;
+    display: none;
 }
 
 .albums-main-container{
@@ -758,6 +768,10 @@ aside{
 
 .menu-item:hover{
     color: white;
+}
+
+.item-clicked:hover::after{
+    display: block;
 }
 
 .album-flex:hover .play-button-album{
