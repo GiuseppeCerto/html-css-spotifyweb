@@ -564,7 +564,7 @@ aside{
         margin-bottom: auto;
     }
 
-    .home-icon:before{
+    .icon-flex:hover::before{
         display: none;
     }
 
